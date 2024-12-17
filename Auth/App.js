@@ -352,6 +352,10 @@ import auth from '@react-native-firebase/auth';
 import Login from './screens/Login';
 import Home from './screens/Home';
 import SignUp from './screens/SignUp';
+import PostUploadScreen from './screens/PostUploadScreen';
+import Profile from './screens/Profile';
+import PostDetail from './screens/PostDetail';
+import Settings from './screens/Settings';
 // import 'react-native-gesture-handler';
 
 const AuthStack = createStackNavigator();
@@ -367,6 +371,10 @@ const AuthStackScreens = () => (
 const AppStackScreens = () => (
   <AppStack.Navigator screenOptions={{headerShown: false}}>
     <AppStack.Screen name="Home" component={Home} />
+    <AppStack.Screen name="PostUpload" component={PostUploadScreen} />
+    <AppStack.Screen name="Profile" component={Profile} />
+    <AppStack.Screen name="PostDetail" component={PostDetail} />
+    <AppStack.Screen name="Settings" component={Settings} />
     {/* Add more screens for the authenticated app flow */}
   </AppStack.Navigator>
 );

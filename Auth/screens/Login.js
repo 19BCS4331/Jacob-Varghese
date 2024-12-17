@@ -81,6 +81,7 @@ const Login = () => {
             profilePhotoUrl: photoUrl || '',
             displayName: displayName || '',
             email: email || '',
+            userID: userId || '',
           });
         console.log('Profile information saved to Firestore.');
       } catch (error) {
@@ -101,21 +102,34 @@ const Login = () => {
         style={styles.backgroundGradient}
       />
       <View style={styles.LoginContainer}>
-        <Image
+        {/* <Image
           style={styles.Logo}
           source={require('../Assets/CurrencyX.png')}
-        />
+        /> */}
         <Text
           style={{
+            fontFamily: 'Poppins-Bold',
+            fontSize: 35,
             alignSelf: 'center',
-            zIndex: 3,
-            fontSize: 25,
-            fontWeight: 'bold',
-            color: '#7B7B7B',
-            bottom: 30,
+            marginTop: 50,
+            marginBottom: 60,
+            color: 'black',
           }}>
-          Login
+          Sociofy
         </Text>
+        <View>
+          <Text
+            style={{
+              alignSelf: 'center',
+              zIndex: 10,
+              fontSize: 25,
+              fontWeight: 'bold',
+              color: '#7B7B7B',
+              bottom: 30,
+            }}>
+            Login
+          </Text>
+        </View>
         <KeyboardAvoidingView style={styles.inputs}>
           <TextInput
             style={styles.usernameInput}
